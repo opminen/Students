@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="student-header">
+            <span class="student-header__title">Students</span>
+            <button class="add_student">Add</button>
+        </div>
+        <div class="students-wraper">
+            <table class="students">
+                <thead>
+                    <tr class="student">
+                        <th class="student-category">id</th>
+                        <th class="student-category">name</th>
+                        <th class="student-category">secondname</th>
+                        <th class="student-category">age</th>
+                        <th class="student-category">cours</th>
+                        <th class="student-category">actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>            
+        </div>
+        <div class="student-footer">
+            <input id="file" type="file" style="display: none;" accept=".json"/>
+            <label class="load" for="file">Load</label>
+            <button class="download">Download</button>
+        </div>
+    </div>
+
+    <div class="wraper_modal">
+        <div class="modal">
+            <div class="modal-info">
+                <span class="student-header__title">Students</span>
+                <label id="done" for="btn" class="student-btn">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24"/>
+                        <path d="M5 13.3636L8.03559 16.3204C8.42388 16.6986 9.04279 16.6986 9.43108 16.3204L19 7" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </label>
+            </div>
+            <form class="modal-form">
+                <span class="modal-form-text">Name: </span>
+                <input required name="name" class="modal-form-inp" type="text" placeholder="Enter text">
+                <span class="modal-form-text">Secondname: </span>
+                <input required name="secondname" class="modal-form-inp" type="text" placeholder="Enter text">
+                <span class="modal-form-text">Age: </span>
+                <input required name="age" class="modal-form-inp" type="number" placeholder="Enter text">
+                <span class="modal-form-text">Cours: </span>
+                <input required name="cours" class="modal-form-inp" type="text" placeholder="Enter text">
+                <button id="btn"></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

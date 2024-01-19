@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    padding-inline: 0;
+    padding-block: 0;
+    background: none;
+    outline: none;
+    border: none;
+    list-style: none;
+    box-sizing: border-box;
+    border-spacing: 0;
+}
+
+body {
+    background-color: #2C6BEC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    margin: auto;
+    width: 1000px;
+    height: 80%;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.student-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.student-header__title {
+    font-size: 20px;
+    color: rgb(65, 65, 255);
+}
+
+.add_student, .load, .download {
+    padding: 10px 20px;
+    background-color: #2C6BEC;
+    border-radius: 20px;
+    transition: all .3s;
+    color: #fff;
+    cursor: pointer;
+}
+
+.add_student:hover, .load:hover {
+    background-color: #0036a3;
+}
+
+.download { 
+    background-color: #00ad26;
+}
+
+.download:hover { 
+    background-color: #006816;
+}
+
+.student-footer {
+    display: flex;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.students {
+    width: 100%;
+    font-family: "Poppins";
+    font-size: 14px;
+}
+
+.student-category {
+    padding: 5px;
+    border: 1px solid rgb(124, 124, 124);
+    font-weight: 300;
+}
+
+.student-btn {
+    line-height: 0;
+    display: inline;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all .3s;
+    /* background-color: black; */
+}
+
+.student-btn>svg {
+    width: 20px;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.student-btn[id=edit]:hover {
+    background-color: #0C6DF3;
+}
+
+.student-btn[id=delete]:hover {
+    background-color: #D93445;
+}
+
+.student-btn[id=done]:hover {
+    background-color: #1ef828;
+}
+
+.wraper_modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 100dvh;
+    width: 100dvw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.301);
+}
+
+.modal {
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    width: 30%;
+    border: 1px solid black;
+}
+
+.modal-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-form-text {
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.modal-form-inp {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.students-wraper {
+    overflow: scroll;
+}
+
+.students-wraper::-webkit-scrollbar {
+    display: none;
+}
